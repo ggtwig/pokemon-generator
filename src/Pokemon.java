@@ -14,7 +14,6 @@ public class Pokemon {
         Random random = new Random();
 
         ArrayList<String> baseMoves =  new ArrayList<String>();
-        baseMoves.add("");
 
 
         movesetCreation(random, baseMoves);
