@@ -6,7 +6,7 @@ public class Main {
         Pokemon pokemon1;
 
         System.out.print("Pokemon Currently Available: ");
-        System.out.println("Arcanine / Nidoking / Greninja");
+        System.out.println("Arcanine / Nidoking / Greninja / Dragonite / Rillaboom");
         System.out.print("What Pokemon do you want? ");
         String poke1Choice = scanner.nextLine();
 
