@@ -33,15 +33,7 @@ public class Rillaboom extends Pokemon {
         baseMoves.add("Endeavor");
         baseMoves.add("Boomburst");
 
-        String[] moveset = new String[4];
-
-        for (int i = 0; i < moveset.length; i++) {
-            int randomIndex = random.nextInt(baseMoves.size());
-            moveset[i] = baseMoves.get(randomIndex);
-            baseMoves.remove(randomIndex);
-        }
-
-        System.out.println(Arrays.toString(moveset));
+        Pokemon.movesetCreation(random, baseMoves);
     }
 
 

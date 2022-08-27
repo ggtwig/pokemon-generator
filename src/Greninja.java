@@ -18,7 +18,6 @@ public class Greninja extends Pokemon {
         ArrayList<String> baseMoves =  new ArrayList<String>();
         baseMoves.add("Bubble");
         baseMoves.add("Growl");
-        baseMoves.add("Haze");
         baseMoves.add("Mat Block");
         baseMoves.add("Night Slash");
         baseMoves.add("Pound");
@@ -39,14 +38,6 @@ public class Greninja extends Pokemon {
         baseMoves.add("Haze");
         baseMoves.add("Night Slash");
 
-        String[] moveset = new String[4];
-
-        for (int i = 0; i < moveset.length; i++) {
-            int randomIndex = random.nextInt(baseMoves.size());
-            moveset[i] = baseMoves.get(randomIndex);
-            baseMoves.remove(randomIndex);
-        }
-
-        System.out.println(Arrays.toString(moveset));
+        Pokemon.movesetCreation(random, baseMoves);
     }
 }

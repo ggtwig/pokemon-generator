@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
+
 public class Pokemon {
 
 
@@ -7,6 +11,26 @@ public class Pokemon {
     }
 
     public void generate() {
-        System.out.println("Pokemon Generated!");
+        Random random = new Random();
+
+        ArrayList<String> baseMoves =  new ArrayList<String>();
+        baseMoves.add("");
+
+
+        movesetCreation(random, baseMoves);
     }
+
+    static void movesetCreation(Random random, ArrayList<String> baseMoves) {
+        String[] moveset = new String[4];
+
+        for (int i = 0; i < moveset.length; i++) {
+            int randomIndex = random.nextInt(baseMoves.size());
+            moveset[i] = baseMoves.get(randomIndex);
+            baseMoves.remove(randomIndex);
+        }
+
+        System.out.println(Arrays.toString(moveset));
+    }
+
+
 }

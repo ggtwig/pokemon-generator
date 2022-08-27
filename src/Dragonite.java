@@ -37,15 +37,7 @@ public class Dragonite extends Pokemon {
         baseMoves.add("Dragon Dance");
         baseMoves.add("Hyper Beam");
 
-        String[] moveset = new String[4];
-
-        for (int i = 0; i < moveset.length; i++) {
-            int randomIndex = random.nextInt(baseMoves.size());
-            moveset[i] = baseMoves.get(randomIndex);
-            baseMoves.remove(randomIndex);
-        }
-
-        System.out.println(Arrays.toString(moveset));
+        Pokemon.movesetCreation(random, baseMoves);
     }
 
 
