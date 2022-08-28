@@ -1,9 +1,10 @@
+package Creation;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
 public class Pokemon {
-
 
 
     public void test() {
@@ -19,7 +20,7 @@ public class Pokemon {
         movesetCreation(random, baseMoves);
     }
 
-    static void movesetCreation(Random random, ArrayList<String> baseMoves) {
+    protected static void movesetCreation(Random random, ArrayList<String> baseMoves) {
         String[] moveset = new String[4];
 
         for (int i = 0; i < moveset.length; i++) {

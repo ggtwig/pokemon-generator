@@ -1,5 +1,8 @@
+package Creation.Pokemons;
+
+import Creation.Pokemon;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 public class Arcanine extends Pokemon {
