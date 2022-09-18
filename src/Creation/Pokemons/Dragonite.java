@@ -41,6 +41,8 @@ public class Dragonite extends Pokemon {
         baseMoves.add("Hyper Beam");
 
         Pokemon.movesetCreation(random, baseMoves);
+
+        Pokemon.ivSpreadCreation();
     }
 
 

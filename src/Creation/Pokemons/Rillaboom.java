@@ -37,6 +37,8 @@ public class Rillaboom extends Pokemon {
         baseMoves.add("Boomburst");
 
         Pokemon.movesetCreation(random, baseMoves);
+
+        Pokemon.ivSpreadCreation();
     }
 
 

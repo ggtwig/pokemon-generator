@@ -39,5 +39,7 @@ public class Arcanine extends Pokemon {
         baseMoves.add("Take Down");
 
         Pokemon.movesetCreation(random, baseMoves);
+
+        Pokemon.ivSpreadCreation();
     }
 }

@@ -36,5 +36,7 @@ public class Nidoking extends Pokemon {
         baseMoves.add("Toxic Spikes");
 
         Pokemon.movesetCreation(random, baseMoves);
+
+        Pokemon.ivSpreadCreation();
     }
 }

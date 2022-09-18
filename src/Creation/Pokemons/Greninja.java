@@ -42,5 +42,7 @@ public class Greninja extends Pokemon {
         baseMoves.add("Night Slash");
 
         Pokemon.movesetCreation(random, baseMoves);
+
+        Pokemon.ivSpreadCreation();
     }
 }
