@@ -18,7 +18,7 @@ public class Rillaboom extends Pokemon {
     public void generate() {
         Random random = new Random();
 
-        ArrayList<String> baseMoves =  new ArrayList<String>();
+        ArrayList<String> baseMoves =  new ArrayList<>();
         baseMoves.add("Branch Poke");
         baseMoves.add("Double Hit");
         baseMoves.add("Drum Beating");
@@ -39,6 +39,8 @@ public class Rillaboom extends Pokemon {
         Pokemon.movesetCreation(random, baseMoves);
 
         Pokemon.ivSpreadCreation();
+
+        Pokemon.evSpreadCreation();
     }
 
 

@@ -18,7 +18,7 @@ public class Arcanine extends Pokemon {
     public void generate() {
         Random random = new Random();
 
-        ArrayList<String> baseMoves =  new ArrayList<String>();
+        ArrayList<String> baseMoves =  new ArrayList<>();
         baseMoves.add("Agility");
         baseMoves.add("Bite");
         baseMoves.add("Burn Up");
@@ -41,5 +41,7 @@ public class Arcanine extends Pokemon {
         Pokemon.movesetCreation(random, baseMoves);
 
         Pokemon.ivSpreadCreation();
+
+        Pokemon.evSpreadCreation();
     }
 }

@@ -18,7 +18,7 @@ public class Greninja extends Pokemon {
     public void generate() {
         Random random = new Random();
 
-        ArrayList<String> baseMoves =  new ArrayList<String>();
+        ArrayList<String> baseMoves =  new ArrayList<>();
         baseMoves.add("Bubble");
         baseMoves.add("Growl");
         baseMoves.add("Mat Block");
@@ -44,5 +44,7 @@ public class Greninja extends Pokemon {
         Pokemon.movesetCreation(random, baseMoves);
 
         Pokemon.ivSpreadCreation();
+
+        Pokemon.evSpreadCreation();
     }
 }

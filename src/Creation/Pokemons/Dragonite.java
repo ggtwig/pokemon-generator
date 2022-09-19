@@ -18,7 +18,7 @@ public class Dragonite extends Pokemon {
     public void generate() {
         Random random = new Random();
 
-        ArrayList<String> baseMoves =  new ArrayList<String>();
+        ArrayList<String> baseMoves =  new ArrayList<>();
         baseMoves.add("Extreme Speed");
         baseMoves.add("Fire Punch");
         baseMoves.add("Hurricane");
@@ -43,6 +43,8 @@ public class Dragonite extends Pokemon {
         Pokemon.movesetCreation(random, baseMoves);
 
         Pokemon.ivSpreadCreation();
+
+        Pokemon.evSpreadCreation();
     }
 
 

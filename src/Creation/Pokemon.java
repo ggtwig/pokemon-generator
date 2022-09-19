@@ -8,23 +8,20 @@ import java.util.Random;
 public class Pokemon {
 
     private static Random random = new Random();
-    private static ArrayList<String> baseMoves =  new ArrayList<String>();
+    private static ArrayList<String> baseMoves =  new ArrayList<>();
     private static HashMap<String, Integer> ivs = new HashMap<>();
+    private static HashMap<String, Integer> evs = new HashMap<>();
 
     public void test() {
         System.out.println("Pokemon Created!");
     }
 
     public void generate() {
-//        Random random = new Random();
-
-//        ArrayList<String> baseMoves =  new ArrayList<String>();
-//        HashMap<String, Integer> ivs = new HashMap<>();
-
-
         movesetCreation(random, baseMoves);
 
         ivSpreadCreation();
+
+        evSpreadCreation();
     }
 
     protected static void movesetCreation(Random random, ArrayList<String> baseMoves) {
@@ -38,11 +35,7 @@ public class Pokemon {
 
         System.out.println(Arrays.toString(moveset));
     }
-
     protected static void ivSpreadCreation() {
-        //Random random = new Random();
-        //HashMap<String, Integer> ivs = new HashMap<>();
-
         for (int i = 0; i <= 5; i++) {
             int randomIV = random.nextInt(32);
             switch (i) {
@@ -66,12 +59,63 @@ public class Pokemon {
                     break;
             }
         }
+    }
 
-        System.out.println("HP: " + ivs.get("HP"));
-        System.out.println("Speed: " + ivs.get("Speed"));
+    protected static void evSpreadCreation() {
+        int hp = 0;
+        int attack = 0;
+        int defense = 0;
+        int specialAttack = 0;
+        int specialDefense = 0;
+        int speed = 0;
+        for (int i = 510; i >= 0; i--) {
+            int randomEVSelect = random.nextInt(6);
+            switch (randomEVSelect) {
+                case 0:
+                    if (hp < 252) {
+                        hp++;
+                    }
+                    break;
+                case 1:
+                    if (attack < 252) {
+                        attack++;
+                    }
+                    break;
+                case 2:
+                    if (defense < 252) {
+                        defense++;
+                    }
+                    break;
+                case 3:
+                    if (specialAttack < 252) {
+                        specialAttack++;
+                    }
+                    break;
+                case 4:
+                    if (specialDefense < 252) {
+                        specialDefense++;
+                    }
+                    break;
+                case 5:
+                    if (speed < 252) {
+                        speed++;
+                    }
+                    break;
+            }
+        }
+        evs.put("HP", hp);
+        evs.put("Attack", attack);
+        evs.put("Defense", defense);
+        evs.put("Special Attack", specialAttack);
+        evs.put("Special Defense" , specialDefense);
+        evs.put("Speed", speed);
     }
 
     public int getIV(String iv) {
         return ivs.get(iv);
+    }
+
+    public int getEV(String ev) {
+        return evs.get(ev);
     }
 }
