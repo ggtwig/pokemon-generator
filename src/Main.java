@@ -36,6 +36,7 @@ public class Main {
 
         pokemon1.test();
         pokemon1.generate();
+        System.out.println(pokemon1.getNature());
         System.out.println(pokemon1.getIV("HP"));
         System.out.println(pokemon1.getEV("Speed"));
 

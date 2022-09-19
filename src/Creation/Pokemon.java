@@ -9,6 +9,8 @@ public class Pokemon {
 
     private static Random random = new Random();
     private static ArrayList<String> baseMoves =  new ArrayList<>();
+    private static ArrayList<String> baseNatures = new ArrayList<>();
+    private static String randomNature;
     private static HashMap<String, Integer> ivs = new HashMap<>();
     private static HashMap<String, Integer> evs = new HashMap<>();
 
@@ -18,6 +20,8 @@ public class Pokemon {
 
     public void generate() {
         movesetCreation(random, baseMoves);
+
+        natureCreation();
 
         ivSpreadCreation();
 
@@ -35,6 +39,37 @@ public class Pokemon {
 
         System.out.println(Arrays.toString(moveset));
     }
+
+    protected static void natureCreation() {
+        baseNatures.add("Bashful");
+        baseNatures.add("Docile");
+        baseNatures.add("Hardy");
+        baseNatures.add("Quirky");
+        baseNatures.add("Serious");
+        baseNatures.add("Adamant");
+        baseNatures.add("Brave");
+        baseNatures.add("Lonely");
+        baseNatures.add("Naughty");
+        baseNatures.add("Bold");
+        baseNatures.add("Impish");
+        baseNatures.add("Lax");
+        baseNatures.add("Relaxed");
+        baseNatures.add("Modest");
+        baseNatures.add("Mild");
+        baseNatures.add("Quiet");
+        baseNatures.add("Rash");
+        baseNatures.add("Calm");
+        baseNatures.add("Careful");
+        baseNatures.add("Gentle");
+        baseNatures.add("Sassy");
+        baseNatures.add("Hasty");
+        baseNatures.add("Jolly");
+        baseNatures.add("Naive");
+        baseNatures.add("Timid");
+        int randomNatureLoc = random.nextInt(25 + 1 - 1) + 1;
+        randomNature = baseNatures.get(randomNatureLoc);
+    }
+
     protected static void ivSpreadCreation() {
         for (int i = 0; i <= 5; i++) {
             int randomIV = random.nextInt(32);
@@ -109,6 +144,10 @@ public class Pokemon {
         evs.put("Special Attack", specialAttack);
         evs.put("Special Defense" , specialDefense);
         evs.put("Speed", speed);
+    }
+
+    public String getNature() {
+        return randomNature;
     }
 
     public int getIV(String iv) {

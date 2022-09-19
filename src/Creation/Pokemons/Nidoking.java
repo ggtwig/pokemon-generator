@@ -37,6 +37,8 @@ public class Nidoking extends Pokemon {
 
         Pokemon.movesetCreation(random, baseMoves);
 
+        Pokemon.natureCreation();
+
         Pokemon.ivSpreadCreation();
 
         Pokemon.evSpreadCreation();
