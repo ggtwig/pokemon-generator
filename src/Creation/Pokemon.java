@@ -7,16 +7,19 @@ import java.util.Random;
 
 public class Pokemon {
 
+    private static Random random = new Random();
+    private static ArrayList<String> baseMoves =  new ArrayList<String>();
+    private static HashMap<String, Integer> ivs = new HashMap<>();
 
     public void test() {
         System.out.println("Pokemon Created!");
     }
 
     public void generate() {
-        Random random = new Random();
+//        Random random = new Random();
 
-        ArrayList<String> baseMoves =  new ArrayList<String>();
-        ArrayList<Integer> ivs = new ArrayList<Integer>();
+//        ArrayList<String> baseMoves =  new ArrayList<String>();
+//        HashMap<String, Integer> ivs = new HashMap<>();
 
 
         movesetCreation(random, baseMoves);
@@ -37,11 +40,11 @@ public class Pokemon {
     }
 
     protected static void ivSpreadCreation() {
-        Random random = new Random();
-        HashMap<String, Integer> ivs = new HashMap<>();
+        //Random random = new Random();
+        //HashMap<String, Integer> ivs = new HashMap<>();
 
         for (int i = 0; i <= 5; i++) {
-            int randomIV= random.nextInt(32);
+            int randomIV = random.nextInt(32);
             switch (i) {
                 case 0:
                     ivs.put("HP", randomIV);
@@ -68,4 +71,7 @@ public class Pokemon {
         System.out.println("Speed: " + ivs.get("Speed"));
     }
 
+    public int getIV(String iv) {
+        return ivs.get(iv);
+    }
 }
