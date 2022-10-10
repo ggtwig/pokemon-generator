@@ -9,7 +9,7 @@ public class Main {
         Pokemon pokemon1;
 
         System.out.print("Pokemon Currently Available: ");
-        System.out.println("Arcanine / Nidoking / Greninja / Dragonite / Rillaboom");
+        System.out.println("Arcanine / Nidoking / Greninja / Dragonite / Rillaboom / Shuckle");
         System.out.print("What Pokemon do you want? ");
         String poke1Choice = scanner.nextLine();
 
@@ -28,6 +28,9 @@ public class Main {
                 break;
             case "rillaboom":
                 pokemon1 = new Rillaboom();
+                break;
+            case "shuckle":
+                pokemon1 = new Shuckle();
                 break;
             default:
                 System.out.println("That is not a valid choice!");
