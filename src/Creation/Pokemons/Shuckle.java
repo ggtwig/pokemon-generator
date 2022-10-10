@@ -16,24 +16,22 @@ public class Shuckle extends Pokemon{
         Random random = new Random();
 
         ArrayList<String> baseMoves =  new ArrayList<String>();
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
-        baseMoves.add("");
+        baseMoves.add("Withdraw");
+        baseMoves.add("Wrap");
+        baseMoves.add("Rollout");
+        baseMoves.add("Struggle Bug");
+        baseMoves.add("Rock Throw");
+        baseMoves.add("Safeguard");
+        baseMoves.add("Rest");
+        baseMoves.add("Bug Bite");
+        baseMoves.add("Guard Split");
+        baseMoves.add("Power Split");
+        baseMoves.add("Rock Slide");
+        baseMoves.add("Gastro Acid");
+        baseMoves.add("Sticky Web");
+        baseMoves.add("Power Trick");
+        baseMoves.add("Stone Edge");
+        baseMoves.add("Shell Smash");
 
         Pokemon.movesetCreation(random, baseMoves);
 
