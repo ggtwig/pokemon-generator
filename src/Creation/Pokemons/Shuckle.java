@@ -8,7 +8,7 @@ import java.util.Random;
 public class Shuckle extends Pokemon{
     @Override
     public void test() {
-        System.out.println("##### Created!");
+        System.out.println("Shuckle Created!");
     }
 
     @Override
